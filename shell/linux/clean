@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Se parte de que la carpeta del proyecto está
+# ubicada dos niveles por encima de la del script
+REL=../..
+
+# averigua el directorio que aloja el script
+SCRIPT=$(readlink -f $0);
+SDIR=`dirname $SCRIPT`
+
+# ruta al directorio del projecto
+SCRIPT=$(readlink -f "$SDIR/$REL/some");
+PDIR=`dirname $SCRIPT`
+
+echo $PDIR/build
+cd $PDIR/build
+cmake --build . --target clean
+

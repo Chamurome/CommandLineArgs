@@ -1,0 +1,133 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "windows": {
+                "command": "${workspaceFolder}/shell/win/build.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "linux": {
+                "command": "${workspaceFolder}/shell/linux/build",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "config",
+            "type": "shell",
+            "windows": {
+                "command": "${workspaceFolder}/shell/win/config.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "linux": {
+                "command": "${workspaceFolder}/shell/linux/config",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "windows": {
+                "command": "${workspaceFolder}/shell/win/run.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "linux": {
+                "command": "${workspaceFolder}/shell/linux/run",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "windows": {
+                "command": "${workspaceFolder}/shell/win/clean.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "linux": {
+                "command": "${workspaceFolder}/shell/linux/clean",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "remove",
+            "type": "shell",
+            "windows": {
+                "command": "${workspaceFolder}/shell/win/remove.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "linux": {
+                "command": "${workspaceFolder}/shell/linux/remove",
+                "options": {
+                    "cwd": "${workspaceFolder}",
+                },
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+
+
+# Se parte de que la carpeta del proyecto eśta
+# ubicada dos niveles por encima de la del script
+REL=../..
+clear 
+
+# averigua el directorio que aloja el script
+SCRIPT=$(readlink -f $0);
+SDIR=`dirname $SCRIPT`
+
+# ruta al directorio del projecto
+SCRIPT=$(readlink -f "$SDIR/$REL/some");
+PDIR=`dirname $SCRIPT`
+
+# Asegura que exista .build
+BDIR=$PDIR/build;
+if  ! test -d "$BDIR" ; then
+    mkdir -p "$BDIR" 
+fi
+cd "$BDIR"
+
+echo --------------------------------------------------------------------------------
+export CXX=g++
+export CMAKE_GENERATOR=Ninja
+cmake ..
+res=$?
+echo --------------------------------------------------------------------------------
+exit $res

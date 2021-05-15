@@ -1,0 +1,13 @@
+Project Root
+|-  .vscode ............................. VSCode settings
+|   |- c_cpp_properties.json, task.json ....
+|-  modules ............................. CMake Modules
+|-  shell ............................... Scripts depending on the s.o.
+|   |-  linux
+|   |   |-  build, clean, run ...
+|   |- win
+|       |-  build, clean, run ...
+|-  src 
+|   |- include .......................... headers
+|   | - ... c++ code files ...
+|-  CMakeLists.txt

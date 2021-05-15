@@ -1,0 +1,11 @@
+message(STATUS "CMAKE_PROJECT_NAME: ${CMAKE_PROJECT_NAME}")
+message(STATUS "PROJECT_NAME: ${PROJECT_NAME}")
+message(STATUS "PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
+
+message(STATUS "----------------------------------------------------------")
+message(STATUS "CMAKE_BINARY_DIR: ${CMAKE_BINARY_DIR}")
+message(STATUS "CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR}")
+message(STATUS "CMAKE_CURRENT_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}")
+message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+message(STATUS "CMAKE_PROJECT_INCLUDE: ${CMAKE_PROJECT_INCLUDE}")
+message(STATUS "----------------------------------------------------------\n")

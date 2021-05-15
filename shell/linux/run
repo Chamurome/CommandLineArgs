@@ -1,0 +1,34 @@
+#!/bin/zsh
+
+# $1 ruta relativa de la aplicacion en build(p.o. app)
+
+
+# Se parte de que la carpeta del proyecto está
+# ubicada dos niveles por encima de la del script
+REL=../..
+
+# averigua el directorio que aloja el script
+SCRIPT=$(readlink -f $0);
+SDIR=`dirname $SCRIPT`
+
+# ruta al directorio del projecto
+SCRIPT=$(readlink -f "$SDIR/$REL/some");
+PDIR=`dirname $SCRIPT`
+
+# construje mediante cmake
+$SDIR/build
+RES=$?
+if test $RES -gt 0; then
+    exit $RES
+fi
+
+# ruta relativa de la aplicacion en build
+APP=app
+if test -n $1; then
+    p_app=$1
+fi
+
+$PDIR/build/$APP
+RES=$?
+echo --------------------------------------------------------------------------------
+exit $RES
